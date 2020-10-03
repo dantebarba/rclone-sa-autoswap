@@ -6,7 +6,6 @@ services:
         container_name: rclone-sa-autoswap
         volumes:
             - path to rclone conf:/config/rclone.conf
-            - path to sa directory:/config/sa
         environment:
             CRON: '0 * * * *' # will renew the SA number once every hour
             MAX_NUMBER: 4 # the number of SAs you generated

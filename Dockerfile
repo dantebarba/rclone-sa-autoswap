@@ -6,6 +6,9 @@ RUN apt-get update \
 && apt-get cron -y -q \
 && apt-get clean
 
+ADD replace.sh .
+RUN chmod +x replace.sh
+
 ADD cron.sh /usr/bin/cron.sh
 RUN chmod +x /usr/bin/cron.sh
 

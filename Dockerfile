@@ -2,9 +2,9 @@ FROM alpine
 
 WORKDIR /app
 
-RUN apt-get update \
-&& apt-get sed dcron -y -q \
-&& apt-get clean
+RUN apk update \
+&& apk sed dcron -y -q \
+&& apk clean
 
 ADD replace.sh .
 RUN chmod +x replace.sh

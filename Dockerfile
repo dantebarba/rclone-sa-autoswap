@@ -2,9 +2,7 @@ FROM alpine
 
 WORKDIR /app
 
-RUN apk update \
-&& apk sed dcron -q \
-&& apk clean
+RUN apk add --no-cache sed dcron -q
 
 ADD replace.sh .
 RUN chmod +x replace.sh

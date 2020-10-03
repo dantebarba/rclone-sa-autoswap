@@ -15,6 +15,6 @@ RUN touch /var/log/replace.log
 ENV PREFIX '/config/sa/gdrive-sa-'
 ENV MAX_NUMBER 1
 ENV CRON '0 * * * *'
-ENV CONFIG_DIR /config/rclone.conf
+ENV CONFIG_DIR '/config/rclone.conf'
 
 ENTRYPOINT ["/bin/sh", "/usr/bin/cron.sh"]

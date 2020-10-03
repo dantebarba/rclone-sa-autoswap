@@ -3,7 +3,7 @@ FROM alpine
 WORKDIR /app
 
 RUN apk update \
-&& apk sed dcron -y -q \
+&& apk sed dcron -q \
 && apk clean
 
 ADD replace.sh .

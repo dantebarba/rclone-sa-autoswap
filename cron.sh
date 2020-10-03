@@ -3,7 +3,7 @@
 if [ -z "$CRON" ]
   then
     echo "INFO: No CRON setting found. Replacing SA now."
-    /app/replace.sh $PREFIX $MAX_NUMBER
+    /app/replace.sh $CONFIG_DIR $PREFIX $MAX_NUMBER
   else
     # Setup cron schedule
     echo "$CRON /app/replace.sh $CONFIG_DIR $PREFIX $MAX_NUMBER >> /var/log/replace.log 2>&1" > /tmp/crontab.tmp

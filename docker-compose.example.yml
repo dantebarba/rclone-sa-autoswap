@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
     rclone-sa-autoswap:
+        image: dantebarba/rclone-sa-autoswap:latest
         container_name: rclone-sa-autoswap
         volumes:
             - path to rclone conf:/config/rclone.conf

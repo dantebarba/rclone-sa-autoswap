@@ -6,7 +6,7 @@ if [ -z "$CRON" ]
     /app/replace.sh $PREFIX $MAX_NUMBER
   else
     # Setup cron schedule
-    echo "$CRON /app/replace.sh $PREFIX $MAX_NUMBER >> /var/log/replace.log 2>&1" > /tmp/crontab.tmp
+    echo "$CRON /app/replace.sh $CONFIG_DIR $PREFIX $MAX_NUMBER >> /var/log/replace.log 2>&1" > /tmp/crontab.tmp
     crontab /tmp/crontab.tmp
     crontab -l
     rm /tmp/crontab.tmp
